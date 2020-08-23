@@ -65,7 +65,7 @@ function search_header_options_page()
   <table>
   <tr valign="top">
   <th scope="row"><a href="https://github.com/XDoubleU/search-header-plugin-astra/projects/1">GitHub Project</a>
-
+  </th>
   </tr>
   <tr valign="top">
   <th scope="row"><label for="search_header_category_menu">Pick your menu:</label></th>
