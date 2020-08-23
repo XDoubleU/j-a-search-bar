@@ -61,6 +61,10 @@ function search_header_options_page()
   <?php settings_fields( 'search_header_options_group' ); ?>
   <table>
   <tr valign="top">
+  <th scope="row"><a href="https://github.com/XDoubleU/search-header-plugin-astra/projects/1">GitHub Project</a>
+
+  </tr>
+  <tr valign="top">
   <th scope="row"><label for="search_header_category_menu">Pick your menu:</label></th>
   <td><select name="search_header_category_menu" >
 	  	<?php foreach(get_terms('nav_menu') as $menu){?>
