@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name:   Search Header
-Description:   Adds custom search bar to header
-GitHub Plugin URI: XDoubleU/search-header-plugin-astra 
-Version:       1.0
-Author:        Xander Warszawski
-Author URI:    https://xdoubleu.com
+Plugin Name:        Search Header
+Description:        Adds custom search bar to header
+GitHub Plugin URI:  XDoubleU/search-header-plugin-astra
+Version:            1.0
+Author:             Xander Warszawski
+Author URI:         https://xdoubleu.com
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
