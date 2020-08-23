@@ -10,7 +10,6 @@
  * License:            GNU General Public License v3.0
  * License URI:        https://github.com/XDoubleU/search-header-plugin-astra/blob/master/LICENSE
  * GitHub Plugin URI:  https://github.com/XDoubleU/search-header-plugin-astra
-
 **/
 
 if ( ! defined( 'ABSPATH' ) ) {
