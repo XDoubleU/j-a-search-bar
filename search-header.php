@@ -1,13 +1,17 @@
 <?php
 
-/*
-Plugin Name:        Search Header
-Description:        Adds custom search bar to header
-GitHub Plugin URI:  XDoubleU/search-header-plugin-astra
-Version:            1.0
-Author:             Xander Warszawski
-Author URI:         https://xdoubleu.com
-*/
+/**
+ * Plugin Name:        Search Header
+ * Plugin URI:         https://github.com/XDoubleU/search-header-plugin-astra
+ * Description:        Adds custom search bar to header
+ * Version:            1.0
+ * Author:             Xander Warszawski
+ * Author URI:         https://xdoubleu.com
+ * License:            GNU General Public License v3.0
+ * License URI:        https://github.com/XDoubleU/search-header-plugin-astra/blob/master/LICENSE
+ * GitHub Plugin URI:  https://github.com/XDoubleU/search-header-plugin-astra
+
+**/
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
