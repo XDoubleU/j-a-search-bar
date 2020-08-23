@@ -4,7 +4,7 @@
  * Plugin Name:        Search Header
  * Plugin URI:         https://github.com/XDoubleU/search-header-plugin-astra
  * Description:        Adds custom search bar to header
- * Version:            1.0
+ * Version:            1.0.1
  * Author:             Xander Warszawski
  * Author URI:         https://xdoubleu.com
  * License:            GNU General Public License v3.0
