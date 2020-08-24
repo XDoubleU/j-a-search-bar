@@ -2,7 +2,7 @@
 
 This plugin displays a search bar with category dropdown in the header of the Astra theme.
 
-![GitHub](https://img.shields.io/github/license/XDoubleU/search-header-plugin-astra?style=flat-square)
+[![GitHub](https://img.shields.io/github/license/XDoubleU/search-header-plugin-astra?style=flat-square)](https://github.com/XDoubleU/search-header-plugin-astra/blob/master/LICENSE)
 
 
 ## Installation
