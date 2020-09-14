@@ -4,7 +4,7 @@
  * Plugin Name:        Just Another Search Bar
  * Plugin URI:         https://github.com/XDoubleU/j-a-search-bar
  * Description:        Adds custom search bar with category filter.
- * Version:            1.0.3
+ * Version:            2.0.0-alpha
  * Author:             Xander Warszawski
  * Author URI:         https://xdoubleu.com
  * License:            GNU General Public License v3.0
@@ -18,8 +18,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* Enable this plugin*/
 function search_bar_enqueue_scripts() {
-  /* enqueue the custom.css file */
+  /* enqueue the stylesheet.css file */
   wp_enqueue_style( 'custom-css', plugins_url( '/css/stylesheet.css', __FILE__ ), $ver = false );
+  /* enqueue the main.js file */
+  wp_register_script( 'custom-js', plugins_url('/js/main.js', __FILE__ ), array('jquery'), '', true);
+  wp_localize_script(
+    'search-main',
+    'opt',
+    array(
+      'ajaxUrl'   => admin_url('admin-ajax.php'),
+      'noResults' => esc_html__( 'No products found', 'textdomain' ),
+    )
+  );
 }
 add_action( 'wp_enqueue_scripts', 'search_bar_enqueue_scripts' );
 
@@ -50,7 +60,7 @@ function search_bar_options_page()
   ?>
   <div>
     <?php screen_icon(); ?>
-    <h1>Search Header Settings</h1>
+    <h1>JA Search Bar Settings</h1>
     <form method="post" action="options.php">
       <?php settings_fields( 'search_bar_options_group' ); ?>
       <table>
