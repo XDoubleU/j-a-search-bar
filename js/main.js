@@ -1,7 +1,7 @@
 function productSearch(form,query,currentQuery,timeout){
 
-    var search   = form.find('.search'),
-        category = form.find('.category');
+    var search   = form.find('.search-input'),
+        category = form.find('.search-category');
 
     form.next('.search-results').html('').removeClass('active');
 
