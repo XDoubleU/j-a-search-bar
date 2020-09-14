@@ -63,8 +63,8 @@ function productSearch(form,query,currentQuery,timeout){
 $('form[name="product-search"]').each(function(){
 
         var form          = $(this),
-            search        = form.find('.search'),
-            category      = form.find('.category'),
+            search        = form.find('.search-input'),
+            category      = form.find('.search-category'),
             currentQuery  = '',
             timeout       = false;
 

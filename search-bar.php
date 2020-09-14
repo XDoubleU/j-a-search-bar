@@ -4,7 +4,7 @@
  * Plugin Name:        Just Another Search Bar
  * Plugin URI:         https://github.com/XDoubleU/j-a-search-bar
  * Description:        Adds custom search bar with category filter.
- * Version:            2.0.2-alpha
+ * Version:            2.0.3-alpha
  * Author:             Xander Warszawski
  * Author URI:         https://xdoubleu.com
  * License:            GNU General Public License v3.0
@@ -33,7 +33,7 @@ function search_bar_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'search_bar_enqueue_scripts' );
 
-/* Add settings*/
+/* START Add settings */
 function search_bar_register_settings() {
   add_option( 'search_bar_category_menu', '');
   register_setting( 'search_bar_options_group', 'search_bar_category_menu', 'search_bar_callback' );
@@ -55,8 +55,7 @@ function search_bar_register_options_page() {
 }
 add_action('admin_menu', 'search_bar_register_options_page');
 
-function search_bar_options_page()
-{
+function search_bar_options_page(){
   ?>
   <div>
     <?php screen_icon(); ?>
@@ -82,11 +81,13 @@ function search_bar_options_page()
       <?php  submit_button(); ?>
     </form>
   </div>
-<?php
+  <?php
 }
+/* END Add settings */
 
+/* START Search Bar front-end*/
 function display_search_bar ( $content ) {
-	/*Get options*/
+	Get options
 	$category_menu = get_option('search_bar_category_menu');
 	$search_input_width = get_option('search_bar_input_width');
   ?>
@@ -123,7 +124,9 @@ function display_search_bar ( $content ) {
 		<input class="search-submit" type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search', 'woocommerce' );?>" />
 		<input type="hidden" name="post_type" value="product" />
 	</form>
+  <div class="search-results"></div>
 	<?php
 	echo $settings;
 }
-add_action( 'astra_masthead_content', 'display_search_bar' );
+add_action( 'astra_masthead_content', 'search_bar_front' );
+/* END Search Bar front-end
