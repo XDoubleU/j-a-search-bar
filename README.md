@@ -1,4 +1,4 @@
-# Search Header Plugin for Astra Theme (Wordpress)
+# Just Another Search Bar (Wordpress)
 
 This plugin displays a search bar with category dropdown in the header of the Astra theme.
 
