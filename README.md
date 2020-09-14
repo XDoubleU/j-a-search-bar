@@ -12,7 +12,7 @@ Usage of [GitHub Updater](https://github.com/afragen/github-updater) is recommen
 Installation procedure of this plugin using [GitHub Updater](https://github.com/afragen/github-updater):<br /> 
 1. Go to *Settings > GitHub Updater*
 2. Go to *Install Plugin*
-3. Only **Plugin URI** has to be filled in; **XDoubleU/search-header-plugin-astra**
+3. Only **Plugin URI** has to be filled in; **XDoubleU/j-a-search-bar**
 
 ## Usage
 
