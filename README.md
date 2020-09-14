@@ -2,7 +2,7 @@
 
 This plugin displays a search bar with category dropdown in the header of the Astra theme.
 
-[![GitHub](https://img.shields.io/github/license/XDoubleU/search-header-plugin-astra?style=flat-square)](https://github.com/XDoubleU/search-header-plugin-astra/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/XDoubleU/j-a-seach-bar?style=flat-square)](https://github.com/XDoubleU/j-a-seach-bar/blob/master/LICENSE)
 
 
 ## Installation
@@ -16,11 +16,11 @@ Installation procedure of this plugin using [GitHub Updater](https://github.com/
 
 ## Usage
 
-A menu has to be picked at *Settings > Search Header*. The search bar width can be changed there too.
+A menu has to be picked at *Settings > JA Search Bar*. The search bar width can be changed there too.
 The search bar and category dropdown work as expected, further explanation doesn't seem necessary.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
-[GNU GPLv3](https://github.com/XDoubleU/search-header-plugin-astra/blob/master/LICENSE)
+[GNU GPLv3](https://github.com/XDoubleU/j-a-seach-bar/blob/master/LICENSE)
