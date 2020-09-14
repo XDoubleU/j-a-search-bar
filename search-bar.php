@@ -59,7 +59,7 @@ function search_bar_options_page(){
   ?>
   <div>
     <?php screen_icon(); ?>
-    <h1>JA Search Bar Settings</h1>
+    <h1>Just Another Search Bar Settings</h1>
     <form method="post" action="options.php">
       <?php settings_fields( 'search_bar_options_group' ); ?>
       <table>

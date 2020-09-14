@@ -1,4 +1,4 @@
-function productSearch(form,query,currentQuery,timeout){
+/*function productSearch(form,query,currentQuery,timeout){
 
     var search   = form.find('.search-input'),
         category = form.find('.search-category');
@@ -81,4 +81,4 @@ $('form[name="product-search"]').each(function(){
 
     });
 
-})(jQuery);
+})(jQuery);*/
