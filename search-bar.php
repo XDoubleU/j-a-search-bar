@@ -4,7 +4,7 @@
  * Plugin Name:        Just Another Search Bar
  * Plugin URI:         https://github.com/XDoubleU/j-a-search-bar
  * Description:        Adds custom search bar with category filter.
- * Version:            2.1.0-alpha
+ * Version:            1.1.0
  * Author:             Xander Warszawski
  * Author URI:         https://xdoubleu.com
  * License:            GNU General Public License v3.0
@@ -76,46 +76,49 @@ function search_bar_options_page(){
 /* END Add settings */
 
 /* START Search Bar front-end*/
-function display_search_bar ( $content ) {
+function display_search_bar () {
 	/*Get options*/
 	$category_menu = get_option('search_bar_category_menu');
 	$search_input_width = get_option('search_bar_input_width');
+
   ?>
-	<form class="search-bar" role="search" method="get" id="search" action="<?php esc_url( home_url( '/'  ) )?>">
+	<form class=search-bar role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/'  ))?>">
 	<?php
-    $args = array(
-    	'orderby'    => 'title',
-        'order'      => 'ASC',
-        'hide_empty' => 0,
-        'parent'  => 0
-    );
+  $args = array(
+    'orderby'    => 'title',
+    'order'      => 'ASC',
+    'hide_empty' => 0,
+    'parent'  => 0
+  );
 	?>
-    <select name="product_cat" class="search-category">
-		    <option value="">ALLES</option>
-	       <?php
-         $menu = wp_get_nav_menu_items( $category_menu, $args );
-         $count = count($menu);
+		<select name="product_cat" class="search-category">
+		<option value="">ALLES</option>
+	<?php
 
-         if ( $count > 0 ){
-    	      foreach ( $menu as $menu_item ) {
-			           $menu_item_id = $menu_item->ID;
-    		         $menu_item_title = $menu_item->title;
-    		         $menu_item_url = $menu_item->url;
-			           $menu_item_slug = chop(str_replace("https://www.toplampen.be/product-categorie/", "",$menu_item_url), "/");
+    $menu = wp_get_nav_menu_items( $category_menu, $args );
+    $count = count($menu);
 
-                if ($menu_item->menu_item_parent == 0) { ?>
-		                <option value="<?php echo $menu_item_slug; ?>"><?php echo $menu_item_title; ?></option><?php
-                }
-		        }
-	       }
-	        ?>
+    if ( $count > 0 ){
+      foreach ( $menu as $menu_item ) {
+        $menu_item_id = $menu_item->ID;
+    		$menu_item_title = $menu_item->title;
+    		$menu_item_url = $menu_item->url;
+			  $menu_item_slug = chop(str_replace(home_url( '/')."product-categorie/", "",$menu_item_url), "/");
+
+        if ($menu_item->menu_item_parent == 0) { ?>
+				      <option value="<?php echo $menu_item_slug; ?>"><?php echo $menu_item_title; ?></option><?php
+        }
+		  }
+	  }
+
+	  ?>
 		</select>
-		<input style="width:<?php echo $search_input_width;?>%;" class="search-input" type="text" value="<?php get_search_query()?>" name="s" id="s" placeholder="Zoeken..." />
+		<input autocomplete="off" style="width:<?php echo $search_input_width;?>%;" class="search-input" type="text" value="<?php echo get_search_query()?>" name="s" id="s" placeholder="Zoeken..." />
 		<input class="search-submit" type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search', 'woocommerce' );?>" />
 		<input type="hidden" name="post_type" value="product" />
-	</form>
+		</form>
 	<?php
-	echo $settings;
+
 }
 add_action( 'astra_masthead_content', 'display_search_bar' );
 /* END Search Bar front-end
