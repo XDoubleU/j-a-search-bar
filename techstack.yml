@@ -1,7 +1,8 @@
 repo_name: XDoubleU/j-a-search-bar
 report_id: a4672a98191c1cc3d1661e7306038e76
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-09T19:12:27+00:00'
+timestamp: '2024-01-04T15:08:32+00:00'
 requested_by: XDoubleU
 provider: github
 branch: master
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/XDoubleU/j-a-search-bar
   detection_source: Repo Metadata
 - name: PHP
   description: A popular general-purpose scripting language that is especially suited
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/XDoubleU/j-a-search-bar
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -34,4 +37,5 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/XDoubleU/j-a-search-bar
   detection_source: Repo Metadata
